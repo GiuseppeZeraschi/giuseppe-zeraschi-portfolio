@@ -1,5 +1,5 @@
 <template>
-    <div class="v-footer">
+    <div v-if="$mq === 'desk'" class="v-footer">
         <div class="v-footer__inner u-text--small">
             &copy; {{ new Date().getFullYear() }}
         </div>

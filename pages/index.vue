@@ -1,6 +1,6 @@
 <template>
   <div class="v-index">
-    <Logo class="v-index__logo" :height="400" />
+    <Logo class="v-index__logo" :height="logoHeight" />
   </div>
 </template>
 
@@ -10,6 +10,11 @@ import Logo from '~/components/Logo/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  computed: {
+    logoHeight() {
+      return this.$mq === 'mobile' ? 150 : 400
+    }
   }
 }
 </script>

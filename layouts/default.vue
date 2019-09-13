@@ -1,7 +1,8 @@
 <template>
   <div>
+    <Navigation />
+    <Hamburger />
     <div class="u-wrapper">
-      <Navbar />
       <nuxt />
     </div>
     <Footer />
@@ -9,13 +10,25 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navigation/Navbar.vue'
+import Navigation from '~/components/Navigation/Navigation.vue'
+import Hamburger from '~/components/Navigation/Hamburger.vue'
 import Footer from '~/components/Footer/Footer.vue'
 
 export default {
   components: {
-    Navbar,
+    Navigation,
+    Hamburger,
     Footer
+  },
+  computed: {
+    isDeskOrAbove() {
+      return this.$mq !== 'mobile'
+    }
+  },
+  watch: {
+    isDeskOrAbove() {
+      this.$store.commit('closeMobileNav')
+    }
   }
 }
 </script>

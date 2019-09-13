@@ -36,7 +36,19 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/style-resources'],
+  modules: [
+    '@nuxtjs/style-resources',[
+      'nuxt-mq',
+      {
+        // Default breakpoint for SSR
+        defaultBreakpoint: 'default',
+        breakpoints: {
+          mobile: 768,
+          desk: Infinity
+        }
+      }
+    ]
+  ],
   /*
   ** Style Resources module configuration
   */
@@ -44,7 +56,7 @@ export default {
     scss: ['assets/scss/app.scss']
   },
   router: {
-    linkExactActiveClass: 'v-navbar__link--active',
+    linkExactActiveClass: 'v-navigation__link--active',
   },
   /*
   ** Build configuration
