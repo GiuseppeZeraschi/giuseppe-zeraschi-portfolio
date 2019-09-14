@@ -13,7 +13,7 @@ export default {
   },
   computed: {
     logoHeight() {
-      return this.$mq === 'mobile' ? 150 : 400
+      return this.$mq === 'mobile' ? 180 : 400
     }
   }
 }

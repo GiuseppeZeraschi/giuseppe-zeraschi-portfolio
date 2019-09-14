@@ -1,6 +1,6 @@
 <template>
   <div class="v-index">
-    <Logo class="v-index__logo" :height="400" />
+    <Logo class="v-index__logo" :height="180" />
   </div>
 </template>
 
