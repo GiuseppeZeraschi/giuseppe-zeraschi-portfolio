@@ -1,33 +1,35 @@
 <template>
-    <nav
-        v-if="$mq === 'desk' || mobileNavIsActive"
-        :class="navClasses"
-        class="v-navigation"
-    >
-        <ul class="v-navigation__links u-wrapper">
-            <li
-                @click="closeMobileNav()"
-                class="v-navigation__logo"
-            >
-                <nuxt-link to="/" class="v-navigation__link">
-                    <Logo :height="logoHeight"/>
-                </nuxt-link>
-            </li>
-            <li
-                v-for="(mobileNavLink, index) in mobileNavLinks"
-                :key="index"
-                @click="closeMobileNav()"
-                class="v-navigation__item"
-            >
-                <nuxt-link
-                    :to="`/${mobileNavLink.to}`"
-                    class="v-navigation__link"
+    <transition name="fade">
+        <nav
+            v-if="$mq === 'desk' || mobileNavIsActive"
+            :class="navClasses"
+            class="v-navigation"
+        >
+            <ul class="v-navigation__links u-wrapper">
+                <li
+                    @click="closeMobileNav()"
+                    class="v-navigation__logo"
                 >
-                    {{ mobileNavLink.text }}
-                </nuxt-link>
-            </li>
-        </ul>
-    </nav>
+                    <nuxt-link to="/" class="v-navigation__link">
+                        <Logo :height="logoHeight"/>
+                    </nuxt-link>
+                </li>
+                <li
+                    v-for="(mobileNavLink, index) in mobileNavLinks"
+                    :key="index"
+                    @click="closeMobileNav()"
+                    class="v-navigation__item"
+                >
+                    <nuxt-link
+                        :to="`/${mobileNavLink.to}`"
+                        class="v-navigation__link"
+                    >
+                        {{ mobileNavLink.text }}
+                    </nuxt-link>
+                </li>
+            </ul>
+        </nav>
+    </transition>
 </template>
 
 <script>
