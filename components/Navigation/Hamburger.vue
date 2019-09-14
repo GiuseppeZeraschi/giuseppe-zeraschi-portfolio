@@ -43,7 +43,7 @@ export default {
     position: absolute;
     right: $spacing-base;
     top: $spacing-base;
-    width: 56px;
+    width: 54px;
     z-index: $z-index-hamburger;
 
     &:hover .v-hamburger__bar {
@@ -60,37 +60,37 @@ export default {
 
         &:nth-child(1) {
             top: 0px;
-            -webkit-transform-origin: left center;
-            -moz-transform-origin: left center;
-            -o-transform-origin: left center;
-            transform-origin: left center;
+            -webkit-transform-origin: right center;
+            -moz-transform-origin: right center;
+            -o-transform-origin: right center;
+            transform-origin: right center;
         }
 
         &:nth-child(2) {
             top: 18px;
-            -webkit-transform-origin: left center;
-            -moz-transform-origin: left center;
-            -o-transform-origin: left center;
-            transform-origin: left center;
+            -webkit-transform-origin: right center;
+            -moz-transform-origin: right center;
+            -o-transform-origin: right center;
+            transform-origin: right center;
         }
 
         &:nth-child(3) {
             margin-bottom: 0;
             top: 36px;
-            -webkit-transform-origin: left center;
-            -moz-transform-origin: left center;
-            -o-transform-origin: left center;
-            transform-origin: left center;
+            -webkit-transform-origin: right center;
+            -moz-transform-origin: right center;
+            -o-transform-origin: right center;
+            transform-origin: right center;
         }
 
         &--active {
             background-color: $color-secondary;
 
             &:nth-child(1) {
-                -webkit-transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -o-transform: rotate(45deg);
-                transform: rotate(45deg);
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
                 top: -3px;
                 left: 8px;
             }
@@ -101,10 +101,10 @@ export default {
             }
 
             &:nth-child(3) {
-                -webkit-transform: rotate(-45deg);
-                -moz-transform: rotate(-45deg);
-                -o-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
                 top: 39px;
                 left: 8px;
             }
