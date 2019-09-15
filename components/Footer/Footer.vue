@@ -6,16 +6,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    methods: {
-        currentYear() {
-            return getFullYear()
-        }
-    }
-}
-</script>
-
 <style lang="scss">
 .v-footer {
     padding-bottom: $spacing-large;
