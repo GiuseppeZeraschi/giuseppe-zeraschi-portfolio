@@ -43,7 +43,7 @@ export default {
     position: absolute;
     right: $spacing-base;
     top: $spacing-base;
-    width: 54px;
+    width: 65px;
     z-index: $z-index-hamburger;
 
     &:hover .v-hamburger__bar {
@@ -54,7 +54,7 @@ export default {
         background-color: $color-white;
         display: block;
         height: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
         transition: all .2s ease-in-out;
         width: 100%;
 
