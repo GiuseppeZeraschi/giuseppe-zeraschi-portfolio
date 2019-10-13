@@ -11,6 +11,11 @@ export default {
   components: {
     Logo
   },
+  head() {
+    return {
+      title: 'Giuseppe Zeraschi | Web Developer'
+    }
+  },
   computed: {
     logoHeight() {
       return this.$mq === 'mobile' ? 180 : 400
