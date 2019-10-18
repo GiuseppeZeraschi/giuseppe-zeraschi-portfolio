@@ -2,9 +2,9 @@
   <div>
     <Navigation />
     <Hamburger />
-    <div class="u-wrapper">
+    <main class="u-wrapper">
       <nuxt />
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
