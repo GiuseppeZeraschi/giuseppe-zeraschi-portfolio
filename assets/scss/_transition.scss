@@ -12,9 +12,9 @@
     transition: opacity .3s;
 }
 
-// .fade-leave{
-//     /* opacity: 1; */
-// }
+.fade-leave{
+    opacity: 1;
+}
 
 .fade-leave-active{
     transition: opacity .3s;

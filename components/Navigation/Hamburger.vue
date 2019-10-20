@@ -1,7 +1,6 @@
 <template>
     <div
         class="v-hamburger"
-        v-if="$mq === 'mobile'"
         @click="toggleMobileNav()"
     >
         <span
@@ -40,15 +39,11 @@ export default {
     cursor: pointer;
     margin-right: -$spacing-tiny;
     padding: $spacing-tiny;
-    position: absolute;
+    position: fixed;
     right: $spacing-base;
     top: $spacing-base;
     width: 65px;
     z-index: $z-index-hamburger;
-
-    &:hover .v-hamburger__bar {
-        box-shadow: 0 0 3px $color-secondary, 0 0 $spacing-tiny $color-tertiary;
-    }
 
     &__bar {
         background-color: $color-white;
@@ -113,35 +108,9 @@ export default {
 
     }
 
+    @media (min-width: $breakpoint-desk) {
+        display: none;
+    }
+
 }
-// .v-hamburger {
-//     cursor: pointer;
-//     margin-right: -$spacing-tiny;
-//     padding: $spacing-tiny;
-//     position: absolute;
-//     right: $spacing-base;
-//     top: $spacing-base;
-//     width: 65px;
-//     z-index: $z-index-hamburger;
-
-//     &:hover .v-hamburger__bar {
-//         box-shadow: 0 0 3px $color-secondary, 0 0 $spacing-tiny $color-tertiary;
-//     }
-
-//     &__bar {
-//         background-color: $color-white;
-//         height: 5px;
-//         margin-bottom: 10px;
-//         transition: box-shadow .2s ease-in-out;
-//         width: 100%;
-
-//         &:last-child {
-//             margin-bottom: 0;
-//         }
-
-//         &--active {
-//             background-color: $color-secondary;
-//         }
-//     }
-// }
 </style>

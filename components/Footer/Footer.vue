@@ -1,5 +1,5 @@
 <template>
-    <div v-if="$mq === 'desk'" class="v-footer">
+    <div v-if="!$store.state.mobileNavIsActive" class="v-footer">
         <div class="v-footer__inner u-text--small">
             &copy; {{ new Date().getFullYear() }}
         </div>

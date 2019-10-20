@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="v-default">
+    <TopPanel />
     <Navigation />
     <Hamburger />
-    <main class="u-wrapper">
+    <main class="v-default__page u-wrapper">
       <nuxt />
     </main>
     <Footer />
@@ -11,18 +12,20 @@
 
 <script>
 import Navigation from '~/components/Navigation/Navigation.vue'
+import TopPanel from '~/components/Navigation/TopPanel.vue'
 import Hamburger from '~/components/Navigation/Hamburger.vue'
 import Footer from '~/components/Footer/Footer.vue'
 
 export default {
   components: {
     Navigation,
+    TopPanel,
     Hamburger,
     Footer
   },
   computed: {
     isDeskOrAbove() {
-      return this.$mq !== 'mobile'
+      return this.$mq === 'desk'
     }
   },
   watch: {
@@ -32,3 +35,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.v-default {
+
+  &__page {
+    padding-top: $top-panel-height;
+  }
+
+}
+</style>

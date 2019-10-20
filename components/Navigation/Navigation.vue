@@ -1,35 +1,32 @@
 <template>
-    <transition name="fade">
-        <nav
-            v-if="$mq === 'desk' || mobileNavIsActive"
-            :class="navClasses"
-            class="v-navigation"
-        >
-            <ul class="v-navigation__links u-wrapper">
-                <li
-                    @click="closeMobileNav()"
-                    class="v-navigation__logo"
+    <nav
+        v-if="$mq === 'desk' || mobileNavIsActive"
+        class="v-navigation"
+    >
+        <ul class="v-navigation__links u-wrapper">
+            <li
+                @click="closeMobileNav()"
+                class="v-navigation__logo"
+            >
+                <nuxt-link to="/" class="v-navigation__link">
+                    <Logo :height="logoHeight"/>
+                </nuxt-link>
+            </li>
+            <li
+                v-for="(mobileNavLink, index) in mobileNavLinks"
+                :key="index"
+                @click="closeMobileNav()"
+                class="v-navigation__item"
+            >
+                <nuxt-link
+                    :to="`/${mobileNavLink.to}`"
+                    class="v-navigation__link"
                 >
-                    <nuxt-link to="/" class="v-navigation__link">
-                        <Logo :height="logoHeight"/>
-                    </nuxt-link>
-                </li>
-                <li
-                    v-for="(mobileNavLink, index) in mobileNavLinks"
-                    :key="index"
-                    @click="closeMobileNav()"
-                    class="v-navigation__item"
-                >
-                    <nuxt-link
-                        :to="`/${mobileNavLink.to}`"
-                        class="v-navigation__link"
-                    >
-                        {{ mobileNavLink.text }}
-                    </nuxt-link>
-                </li>
-            </ul>
-        </nav>
-    </transition>
+                    {{ mobileNavLink.text }}
+                </nuxt-link>
+            </li>
+        </ul>
+    </nav>
 </template>
 
 <script>
@@ -68,11 +65,6 @@ export default {
         logoHeight() {
             if (this.$mq === 'desk') return 50
         },
-        navClasses() {
-            return {
-                'v-navigation--desk': this.$mq === 'desk',
-            }
-        }
     },
     methods: {
         closeMobileNav() {
@@ -88,7 +80,7 @@ export default {
     bottom: 0;
     left: 0;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: $z-index-mobileNav;
@@ -116,11 +108,6 @@ export default {
 
     &__link {
         padding: $spacing-tiny;
-        transition: all .2s ease-in-out;
-
-        &:hover {
-            text-shadow: 0 0 3px $color-secondary, 0 0 6px $color-tertiary;
-        }
 
         &--active {
             color: $color-secondary;
@@ -128,11 +115,10 @@ export default {
 
     }
 
-    &--desk {
+    @media (min-width: $breakpoint-desk) {
         background-color: $color-primary;
-        padding-bottom: $spacing-base;
-        padding-top: $spacing-base;
-        position: initial;
+        height: $top-panel-height;
+        position: fixed;
         
         .v-navigation__links {
             align-items: center;
@@ -152,6 +138,15 @@ export default {
 
             &:not(:first-child) {
                 margin-left: $spacing-base;
+            }
+
+        }
+
+        &__link {
+        transition: all .2s ease-in-out;
+
+            &:hover {
+                text-shadow: 0 0 3px $color-secondary, 0 0 6px $color-tertiary;
             }
 
         }
