@@ -1,6 +1,7 @@
 <template>
     <nav
         v-if="$mq === 'desk' || mobileNavIsActive"
+        :class="{ 'v-navigation--scrolled': pageIsScrolled }"
         class="v-navigation"
     >
         <ul class="v-navigation__links u-wrapper">
@@ -35,6 +36,12 @@ import Logo from '~/components/Logo/Logo.vue'
 export default {
     components: {
         Logo
+    },
+    props: {
+        pageIsScrolled: {
+            type: Boolean,
+            default: false
+        }
     },
     data() {
         return {
@@ -119,6 +126,10 @@ export default {
         background-color: $color-primary;
         height: $top-panel-height;
         position: fixed;
+
+        &--scrolled {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
         
         .v-navigation__links {
             align-items: center;

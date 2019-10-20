@@ -1,7 +1,7 @@
 <template>
   <div class="v-default">
-    <TopPanel />
-    <Navigation />
+    <TopPanel :page-is-scrolled="pageIsScrolled"/>
+    <Navigation :page-is-scrolled="pageIsScrolled"/>
     <Hamburger />
     <main class="v-default__page u-wrapper">
       <nuxt />
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import throttle from 'lodash.throttle'
 import Navigation from '~/components/Navigation/Navigation.vue'
 import TopPanel from '~/components/Navigation/TopPanel.vue'
 import Hamburger from '~/components/Navigation/Hamburger.vue'
@@ -23,6 +24,11 @@ export default {
     Hamburger,
     Footer
   },
+  data() {
+    return {
+      pageIsScrolled: false
+    }
+  },
   computed: {
     isDeskOrAbove() {
       return this.$mq === 'desk'
@@ -31,6 +37,17 @@ export default {
   watch: {
     isDeskOrAbove() {
       this.$store.commit('closeMobileNav')
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', throttle(this.handleScroll, 300))
+  },
+  destroyed() {
+    window.removeEventListener('scroll', throttle(this.handleScroll, 300))
+  },
+  methods: {
+    handleScroll() {
+      this.pageIsScrolled = window.pageYOffset > 0
     }
   }
 }
