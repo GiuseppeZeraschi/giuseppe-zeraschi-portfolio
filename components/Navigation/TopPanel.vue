@@ -21,6 +21,7 @@ export default {
     background-color: $color-primary;
     height: 105px;
     position: fixed;
+    transition: box-shadow .1s ease-in-out;
     width: 100%;
 
     &--scrolled {

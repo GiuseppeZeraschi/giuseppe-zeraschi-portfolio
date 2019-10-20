@@ -126,6 +126,7 @@ export default {
         background-color: $color-primary;
         height: $top-panel-height;
         position: fixed;
+        transition: box-shadow .1s ease-in-out;
 
         &--scrolled {
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -154,7 +155,7 @@ export default {
         }
 
         &__link {
-        transition: all .2s ease-in-out;
+        transition: text-shadow .2s ease-in-out;
 
             &:hover {
                 text-shadow: 0 0 3px $color-secondary, 0 0 6px $color-tertiary;
