@@ -1,6 +1,6 @@
 <template>
     <div class="v-error u-wrapper">
-        <h1 class="v-error__title">Oops! Looks like this page doesn't exist...</h1>
+        <h1 class="v-error__heading">Oops! Looks like this page doesn't exist...</h1>
         <nuxt-link class="u-button" to="/">Back to home</nuxt-link>
     </div>
 </template>
@@ -25,9 +25,10 @@ export default {
     justify-content: center;
     text-align: center;
 
-    &__title {
+    &__heading {
         font-size: 32px;
         margin-bottom: $spacing-large;
     }
+
 }
 </style>
