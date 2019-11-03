@@ -108,8 +108,8 @@ export default {
     }
 
     &__item {
-        font-size: 32px;
-        letter-spacing: 2px;
+        font-size: 3.2rem;
+        letter-spacing: .2rem;
         margin-bottom: $spacing-large;
     }
 
@@ -144,8 +144,8 @@ export default {
         }
 
         .v-navigation__item {
-            font-size: 18px;
-            letter-spacing: 1px;
+            font-size: 1.8rem;
+            letter-spacing: .1rem;
             margin-bottom: 0;
 
             &:not(:first-child) {

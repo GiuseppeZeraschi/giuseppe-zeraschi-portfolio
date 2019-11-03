@@ -2,12 +2,12 @@
     background-color: #FF49B2;
     box-shadow: 3px 3px #000;
     font-family: 'Space Mono', monospace;
-    font-size: 18px;
-    padding: 12px;
+    font-size: 1.8rem;
+    padding: 1.2rem 2.4rem;
     transition: all .2s ease-in-out;
 
     &:hover {
-        background-color: #FF7CC7;
+        background-color: #ff7cc7;
         box-shadow: none;
     }
 }

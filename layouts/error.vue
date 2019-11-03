@@ -26,7 +26,7 @@ export default {
     text-align: center;
 
     &__heading {
-        font-size: 32px;
+        font-size: 3.2rem;
         margin-bottom: $spacing-large;
     }
 

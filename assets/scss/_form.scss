@@ -8,7 +8,7 @@
             flex-direction: row;
 
             & > :not(:first-child) {
-                padding-left: 24px;
+                padding-left: 2.4rem;
             }
 
         }
@@ -26,8 +26,8 @@
         border: none;
         color: #fff;
         font-family: 'Space Mono', monospace;
-        font-size: 16px;
-        padding: 6px;
+        font-size: 1.6rem;
+        padding: .6rem;
     }
 
 }

@@ -20,15 +20,19 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
+.u-text--initial {
+    font-size: initial;
+}
+
 .u-text--small {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .u-text--base {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .u-text--large {
-    font-size: 32px;
-    letter-spacing: .5px;
+    font-size: 3.2rem;
+    letter-spacing: .05rem;
 }

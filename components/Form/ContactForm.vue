@@ -2,7 +2,7 @@
     <form
         method="POST"
         data-netlify="true"
-        class="v-contact-form"
+        class="v-contact-form u-text--initial"
     >
         <h1 class="v-contact-form__heading u-text--large">{{ headings[headingIndex] }}</h1>
         <div class="u-form__input-group">
@@ -122,7 +122,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 600px;
+    width: 60rem;
 
     &__heading {
         margin-bottom: $spacing-large;
@@ -141,17 +141,18 @@ export default {
 
     &__input {
         margin-bottom: $spacing-small;
+        width: 100%;
     }
 
     &__text-area {
         height: $spacing-huge;
         margin-bottom: $spacing-large;
         resize: none;
+        width: 100%;
     }
 
     &__submit {
         align-self: center;
-        width: $spacing-huge;
 
         @media (min-width: $breakpoint-desk) {
             align-self: flex-end;

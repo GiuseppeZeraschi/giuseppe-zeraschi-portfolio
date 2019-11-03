@@ -19,7 +19,7 @@ export default {
 <style lang="scss">
 .v-top-panel {
     background-color: $color-primary;
-    height: 105px;
+    height: 10.5rem;
     position: fixed;
     transition: box-shadow .1s ease-in-out;
     width: 100%;
