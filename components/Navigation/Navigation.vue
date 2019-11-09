@@ -6,11 +6,12 @@
     >
         <ul class="v-navigation__links u-wrapper">
             <li
+                v-if="!mobileNavIsActive"
                 @click="closeMobileNav()"
                 class="v-navigation__logo"
             >
                 <nuxt-link to="/" class="v-navigation__link">
-                    <Logo :height="logoHeight"/>
+                    <Logo />
                 </nuxt-link>
             </li>
             <li
@@ -68,9 +69,6 @@ export default {
     computed: {
         mobileNavIsActive() {
             return this.$store.state.mobileNavIsActive
-        },
-        logoHeight() {
-            if (this.$mq === 'desk') return 50
         },
     },
     methods: {

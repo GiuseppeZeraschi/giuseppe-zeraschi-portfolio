@@ -1,6 +1,6 @@
 <template>
-  <div class="v-index">
-    <Logo class="v-index__logo" :height="logoHeight" />
+  <div class="v-index u-section">
+    <Logo class="v-index__logo" size="huge" />
   </div>
 </template>
 
@@ -16,11 +16,6 @@ export default {
       title: 'Giuseppe Zeraschi | Web Developer'
     }
   },
-  computed: {
-    logoHeight() {
-      return this.$mq === 'mobile' ? 180 : 400
-    }
-  }
 }
 </script>
 
@@ -32,7 +27,6 @@ export default {
 
   &__logo {
     animation: float 6s ease-in-out infinite;
-    padding: $spacing-large;
   }
 
 }
