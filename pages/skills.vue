@@ -104,6 +104,7 @@ export default {
 
   &__star-rating-icon {
     color: $color-tertiary;
+    height: 100%;
     width: 100%;
   }
 
