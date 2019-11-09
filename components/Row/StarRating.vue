@@ -42,8 +42,8 @@ export default {
         align-items: center;
         display: flex;
         flex-direction: column;
-        height: 12rem;
-        width: 12rem;
+        height: $spacing-huge;
+        width: $spacing-huge;
     }
 
     &__star-row {
