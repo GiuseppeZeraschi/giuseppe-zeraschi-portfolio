@@ -18,7 +18,7 @@
                 v-for="(mobileNavLink, index) in mobileNavLinks"
                 :key="index"
                 @click="closeMobileNav()"
-                class="v-navigation__item"
+                class="v-navigation__item u-text--large-alt"
             >
                 <nuxt-link
                     :to="`/${mobileNavLink.to}`"
@@ -88,7 +88,7 @@ export default {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: $z-index-mobileNav;
+    z-index: $z-index-mobile-nav;
 
     &__logo {
         display: flex;
@@ -106,8 +106,6 @@ export default {
     }
 
     &__item {
-        font-size: 3.2rem;
-        letter-spacing: .2rem;
         margin-bottom: $spacing-large;
     }
 

@@ -1,0 +1,23 @@
+.u-flex {
+    display: flex;
+}
+
+.u-flex--column {
+    flex-direction: column;
+}
+
+.u-flex--row\@device {
+
+    @media (min-width: $breakpoint-desk) {
+        flex-direction: row;
+    }
+
+}
+
+.u-flex__justify-content--center {
+    justify-content: center;
+}
+
+.u-flex__align-items--center {
+    align-items: center;
+}

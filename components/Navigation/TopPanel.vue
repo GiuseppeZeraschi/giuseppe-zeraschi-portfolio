@@ -23,6 +23,7 @@ export default {
     position: fixed;
     transition: box-shadow .1s ease-in-out;
     width: 100%;
+    z-index: $z-index-top-panel;
 
     &--scrolled {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
