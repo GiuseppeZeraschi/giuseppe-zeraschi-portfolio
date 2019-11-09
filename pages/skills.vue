@@ -99,7 +99,7 @@ export default {
 .v-skills {
 
   &__star-rating {
-    margin-bottom: $spacing-base;
+    margin-bottom: $spacing-large;
   }
 
   &__star-rating-icon {
