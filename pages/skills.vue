@@ -1,5 +1,5 @@
 <template>
-  <div class="v-skills u-section u-flex u-flex--column u-flex--row@device u-flex__justify-content--center u-flex__align-items--center">
+  <div class="v-skills u-section u-flex u-flex--column u-flex--row@device u-flex__justify-content--space-evenly u-flex__align-items--center">
     <div class="u-flex u-flex--column">
       <StarRating
         class="v-skills__star-rating"
@@ -30,7 +30,7 @@
         <LaravelSvg class="v-skills__star-rating-icon" />
       </StarRating>
     </div>
-    <div class="u-flex u-flex--column u-margin-left--large@device">
+    <div class="u-flex u-flex--column">
       <StarRating
         class="v-skills__star-rating"
         text="Git"
@@ -99,7 +99,7 @@ export default {
 .v-skills {
 
   &__star-rating {
-    margin-bottom: $spacing-large;
+    margin-bottom: $spacing-huge;
   }
 
   &__star-rating-icon {
