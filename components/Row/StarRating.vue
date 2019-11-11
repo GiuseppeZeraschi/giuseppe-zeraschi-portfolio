@@ -45,6 +45,8 @@ export default {
     }
 }
 
+$icon-dimensions: 7.2rem;
+
 .v-star-rating {
     display: flex;
 
@@ -52,8 +54,8 @@ export default {
         align-items: center;
         display: flex;
         flex-direction: column;
-        height: $spacing-large;
-        width: $spacing-large;
+        height: $icon-dimensions;
+        width: $icon-dimensions;
 
         @media (min-width: $breakpoint-desk) {
             height: $spacing-huge;

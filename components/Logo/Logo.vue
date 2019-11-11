@@ -26,7 +26,7 @@ export default {
   width: auto;
 
   &--base {
-    height: 70px;
+    height: 60px;
   }
 
   &--huge {
