@@ -100,23 +100,23 @@ $icon-dimensions: 7.2rem;
         width: $spacing-small;
 
         &--1 {
-            animation: fadeIn .5s ease-in 1s forwards;
+            animation: fadeIn .5s ease-in forwards;
         }
 
         &--2 {
-            animation: fadeIn .6s ease-in 1.4s forwards;
+            animation: fadeIn .6s ease-in .4s forwards;
         }
 
         &--3 {
-            animation: fadeIn .8s ease-in 1.8s forwards;
+            animation: fadeIn .8s ease-in .8s forwards;
         }
 
         &--4 {
-            animation: fadeIn 1.2s ease-in 2.2s forwards;
+            animation: fadeIn 1.2s ease-in 1.2s forwards;
         }
 
         &--5 {
-            animation: fadeIn 2s ease-in 2.6s forwards;
+            animation: fadeIn 2s ease-in 1.6s forwards;
         }
 
     }
