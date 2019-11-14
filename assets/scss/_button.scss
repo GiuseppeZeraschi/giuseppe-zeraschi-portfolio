@@ -10,4 +10,11 @@
         background-color: #ff7cc7;
         box-shadow: none;
     }
+
+    @media (max-width: $breakpoint-desk) {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
 }
