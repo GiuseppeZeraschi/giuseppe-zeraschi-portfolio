@@ -4,10 +4,10 @@ $spacing-base: 2.4rem;
 $spacing-large: 4.8rem;
 $spacing-huge: 9.6rem;
 
-.u-margin-left--large\@device {
-    
-    @media (min-width: $breakpoint-desk) {
-        margin-left: $spacing-large;
-    }
+.u-margin-bottom--large {
+    margin-bottom: $spacing-large;
+}
 
+.u-margin-bottom--huge {
+    margin-bottom: $spacing-huge;
 }

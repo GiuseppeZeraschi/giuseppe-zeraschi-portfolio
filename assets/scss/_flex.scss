@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 
-.u-flex--row\@device {
+.u-flex--row\@fromDevice {
 
     @media (min-width: $breakpoint-desk) {
         flex-direction: row;

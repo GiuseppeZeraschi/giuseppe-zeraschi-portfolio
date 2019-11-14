@@ -1,5 +1,5 @@
 <template>
-  <div class="v-skills u-section u-flex u-flex--column u-flex--row@device u-flex__justify-content--space-evenly u-flex__align-items--center">
+  <div class="v-skills u-section u-flex u-flex--column u-flex--row@fromDevice u-flex__justify-content--space-evenly u-flex__align-items--center">
     <div class="u-flex u-flex--column">
       <StarRating
         class="v-skills__star-rating"

@@ -1,5 +1,5 @@
 <template>
-  <div class="v-work">
+  <div class="v-work u-section">
     Work
   </div>
 </template>
