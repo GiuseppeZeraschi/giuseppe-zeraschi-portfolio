@@ -45,7 +45,7 @@ export default {
     }
 }
 
-$icon-dimensions: 7.2rem;
+$icon-dimensions: 8.4rem;
 
 .v-star-rating {
     display: flex;
@@ -79,11 +79,6 @@ $icon-dimensions: 7.2rem;
 
         &:not(:first-child) {
             margin-left: $spacing-small;
-
-            @media (min-width: $breakpoint-desk) {
-                margin-left: $spacing-base;
-            }
-
         }
 
     }

@@ -26,7 +26,7 @@ export default {
     z-index: $z-index-top-panel;
 
     &--scrolled {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 1px 3px #170837;
     }
 
     @media (min-width: $breakpoint-desk) {

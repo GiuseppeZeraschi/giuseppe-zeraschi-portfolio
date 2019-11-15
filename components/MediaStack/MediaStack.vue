@@ -64,11 +64,7 @@ export default {
         align-items: center;
         display: flex;
         justify-content: center;
-
-        @media (min-width: $breakpoint-desk) {
-            padding: $spacing-base;
-        }
-
+        padding: $spacing-base;
     }
 
     &__text {
@@ -77,6 +73,10 @@ export default {
             margin-left: $spacing-large;
         }
 
+    }
+
+    &__button {
+        float: right;
     }
 
     &--reverse {
@@ -95,6 +95,10 @@ export default {
 
         .v-media-stack__text {
             margin-left: 0;
+        }
+
+        .v-media-stack__button {
+            float: none;
         }
 
     }

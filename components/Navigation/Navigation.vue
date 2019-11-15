@@ -113,7 +113,7 @@ export default {
         padding: $spacing-tiny;
 
         &--active {
-            color: $color-secondary;
+            color: $color-tertiary;
         }
 
     }
