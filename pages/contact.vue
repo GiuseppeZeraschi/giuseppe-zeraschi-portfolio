@@ -16,14 +16,6 @@ export default {
       title: 'Giuseppe Zeraschi | Contact'
     }
   },
-  data() {
-    return {
-      form: {
-        firstName: '',
-        lastName: '',
-      }
-    }
-  }
 }
 </script>
 
