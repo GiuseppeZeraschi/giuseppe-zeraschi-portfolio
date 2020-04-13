@@ -22,9 +22,9 @@
     }
 
     &__input {
-        background-color: #170837;
+        background-color: $grey-three;
         border: none;
-        color: #fff;
+        color: $white;
         font-family: 'Space Mono', monospace;
         font-size: 1.6rem;
         padding: .6rem;

@@ -46,7 +46,7 @@ export default {
     z-index: $z-index-hamburger;
 
     &__bar {
-        background-color: $color-white;
+        background-color: $white;
         display: block;
         height: 5px;
         margin-bottom: 14px;
@@ -79,7 +79,7 @@ export default {
         }
 
         &--active {
-            background-color: $color-secondary;
+            background-color: $color-primary;
 
             &:nth-child(1) {
                 -webkit-transform: rotate(-45deg);

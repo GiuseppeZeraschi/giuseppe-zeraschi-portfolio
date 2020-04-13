@@ -1,14 +1,17 @@
+// CORE VARIABLES
 @import '_breakpoint';
-@import '_button';
 @import '_color';
+@import '_spacing';
+@import '_z-index';
+
+// UTILITIES
+@import '_button';
 @import '_flex';
 @import '_font';
 @import '_footer';
 @import '_form';
 @import '_reset';
 @import '_section';
-@import '_spacing';
 @import '_top-panel';
 @import '_transition';
 @import '_wrapper';
-@import '_z-index';

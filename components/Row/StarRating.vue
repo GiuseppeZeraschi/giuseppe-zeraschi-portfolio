@@ -71,7 +71,7 @@ $icon-dimensions: 8.4rem;
     }
 
     &__star-container {
-        background-color: $color-quaternary;
+        background-color: $grey-three;
         border-radius: 50%;
         height: $spacing-base;
         position: relative;
@@ -85,7 +85,7 @@ $icon-dimensions: 8.4rem;
 
     &__star {
         border-radius: 50%;
-        background-color: $color-tertiary;
+        background-color: $color-secondary;
         height: $spacing-small;
         left: 50%;
         opacity: 0;

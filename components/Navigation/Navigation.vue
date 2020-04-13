@@ -81,7 +81,7 @@ export default {
 
 <style lang="scss">
 .v-navigation {
-    background-color: $color-quaternary;
+    background-color: $grey-three;
     bottom: 0;
     left: 0;
     overflow: hidden;
@@ -113,19 +113,20 @@ export default {
         padding: $spacing-tiny;
 
         &--active {
-            color: $color-tertiary;
+            color: $color-secondary;
         }
 
     }
 
     @media (min-width: $breakpoint-desk) {
-        background-color: $color-primary;
+        background-color: $grey-two;
         height: $top-panel-height;
         position: fixed;
-        transition: box-shadow .1s ease-in-out;
+        transition: all .2s ease-in-out;
 
         &--scrolled {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            background-color: $grey-one;
+            box-shadow: 0 1px 3px rgba($black, 0.4);
         }
         
         .v-navigation__links {
@@ -154,7 +155,7 @@ export default {
         transition: text-shadow .2s ease-in-out;
 
             &:hover {
-                text-shadow: 0 0 3px $color-secondary, 0 0 6px $color-tertiary;
+                text-shadow: 0 0 3px $color-primary, 0 0 6px $color-secondary;
             }
 
         }

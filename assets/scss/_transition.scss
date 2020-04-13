@@ -1,9 +1,5 @@
 // VUE TRANSITIONS
 
-// <transition name="fade">
-//     <div></div>
-// </transition>
-
 .fade-enter{
     opacity: 0;
 }
@@ -23,7 +19,6 @@
 
 // CSS ANIMATIONS
 
-// animation: float 6s ease-in-out infinite;
 @keyframes float {
     0% {
         transform: translateY(0px);

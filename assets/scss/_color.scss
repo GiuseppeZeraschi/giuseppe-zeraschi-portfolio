@@ -1,10 +1,14 @@
-$color-primary: #32127A;
-$color-secondary: #FF7CC7;
-$color-tertiary: #FF49B2;
-$color-quaternary: #170837;
-$color-white: #ffffff;
+$color-primary: #FF7CC7;
+$color-secondary: #FF49B2;
+
+$grey-one: #424242;
+$grey-two: #303030;
+$grey-three: #212121;
+
+$white: #FFFFFF;
+$black: #000000;
 
 body {
-    background-color: $color-primary;
-    color: $color-white;
+    background-color: $grey-two;
+    color: $white;
 }
