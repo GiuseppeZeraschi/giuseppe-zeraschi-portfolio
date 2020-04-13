@@ -21,12 +21,11 @@ export default {
     background-color: $grey-two;
     height: 10.5rem;
     position: fixed;
-    transition: all .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
     width: 100%;
     z-index: $z-index-top-panel;
 
     &--scrolled {
-        background-color: $grey-one;
         box-shadow: 0 1px 3px $black;
     }
 

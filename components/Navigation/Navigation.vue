@@ -122,10 +122,9 @@ export default {
         background-color: $grey-two;
         height: $top-panel-height;
         position: fixed;
-        transition: all .2s ease-in-out;
+        transition: box-shadow .2s ease-in-out;
 
         &--scrolled {
-            background-color: $grey-one;
             box-shadow: 0 1px 3px rgba($black, 0.4);
         }
         
