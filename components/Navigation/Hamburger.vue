@@ -79,7 +79,7 @@ export default {
         }
 
         &--active {
-            background-color: $color-primary;
+            background-color: $color-primary-light;
 
             &:nth-child(1) {
                 -webkit-transform: rotate(-45deg);

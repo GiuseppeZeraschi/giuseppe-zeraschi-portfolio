@@ -103,7 +103,7 @@ export default {
   }
 
   &__star-rating-icon {
-    color: $color-secondary;
+    color: $color-primary;
     height: 100%;
     width: 100%;
   }

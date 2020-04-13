@@ -113,7 +113,7 @@ export default {
         padding: $spacing-tiny;
 
         &--active {
-            color: $color-secondary;
+            color: $color-primary;
         }
 
     }
@@ -154,8 +154,8 @@ export default {
         &__link {
         transition: text-shadow .2s ease-in-out;
 
-            &:hover {
-                text-shadow: 0 0 3px $color-primary, 0 0 6px $color-secondary;
+            &:hover:not(.v-navigation__link--active) {
+                text-shadow: 0 0 3px $color-primary, 0 0 6px $color-primary-light;
             }
 
         }

@@ -178,7 +178,7 @@ export default {
         margin-bottom: $spacing-tiny;
 
         &--active {
-            color: $color-primary;
+            color: $color-primary-light;
         }
 
     }
