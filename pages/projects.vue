@@ -9,11 +9,7 @@
       class="v-projects__media-stack"
     >
       <template v-slot:image>
-        <img
-          class="v-projects__brand-logo"
-          :src="require(`~/assets/img/${project.imgFilename}.png`)"
-          :alt="project.imgAlt"
-        >
+        <component :is="project.svg" class="v-projects__brand-logo" />
       </template>
       <template v-slot:text>
         <p class="u-margin-bottom--large">
@@ -26,10 +22,16 @@
 
 <script>
 import MediaStack from '~/components/MediaStack/MediaStack.vue'
+import WhirliLogoSvg from '~/assets/svg/brand-logos/whirli-logo.svg'
+import ZumaLogoSvg from '~/assets/svg/brand-logos/zuma-logo.svg'
+import InkoLogoSvg from '~/assets/svg/brand-logos/inko-logo.svg'
 
 export default {
   components: {
-    MediaStack
+    MediaStack,
+    WhirliLogoSvg,
+    ZumaLogoSvg,
+    InkoLogoSvg
   },
   head() {
     return {
@@ -42,22 +44,19 @@ export default {
         {
           buttonHref: 'https://whirli.com/',
           buttonText: 'Visit Whirli',
-          imgFilename: 'whirli-logo',
-          imgAlt: 'Whirli Logo',
+          svg: 'WhirliLogoSvg',
           copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illo magni praesentium earum officiis assumenda. Dicta libero ipsam esse pariatur possimus adipisci nulla tenetur, soluta dolore repellat aperiam nemo non excepturi sunt fugit, eligendi aspernatur officiis veniam cumque at a, quis minima quibusdam distinctio! Veritatis aliquam quod cum nobis quidem.'
         },
         {
           buttonHref: 'https://zumarestaurant.com/',
           buttonText: 'Visit Zuma',
-          imgFilename: 'whirli-logo',
-          imgAlt: 'Zuma Logo',
+          svg: 'ZumaLogoSvg',
           copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illo magni praesentium earum officiis assumenda. Dicta libero ipsam esse pariatur possimus adipisci nulla tenetur, soluta dolore repellat aperiam nemo non excepturi sunt fugit, eligendi aspernatur officiis veniam cumque at a, quis minima quibusdam distinctio! Veritatis aliquam quod cum nobis quidem.'
         },
         {
           buttonHref: 'https://inkonitorestaurant.com/',
           buttonText: 'Visit Inko Nito',
-          imgFilename: 'whirli-logo',
-          imgAlt: 'Inko Nito Logo',
+          svg: 'InkoLogoSvg',
           copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illo magni praesentium earum officiis assumenda. Dicta libero ipsam esse pariatur possimus adipisci nulla tenetur, soluta dolore repellat aperiam nemo non excepturi sunt fugit, eligendi aspernatur officiis veniam cumque at a, quis minima quibusdam distinctio! Veritatis aliquam quod cum nobis quidem.'
         }
       ]
