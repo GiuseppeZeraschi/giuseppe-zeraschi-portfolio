@@ -2,9 +2,14 @@
     <form
         method="POST"
         data-netlify="true"
-        class="v-contact-form u-text--initial"
+        class="v-contact-form u-text--initial u-wrapper--small"
     >
-        <h1 class="v-contact-form__heading u-text--large">{{ headings[headingIndex] }}</h1>
+        <h1 class="v-contact-form__heading u-margin-bottom--base u-text--large u-text--center u-color-primary">
+            {{ headings[headingIndex] }}
+        </h1>
+        <h2 class="v-contact-form__sub-heading u-text--small u-text--center">
+            Don't hesitate to get in contact and I'll get back to you as soon as possible.
+        </h2>
         <div class="u-form__input-group">
             <div class="u-form__input-wrapper">
                 <label
@@ -161,15 +166,12 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60rem;
 
-    &__heading {
+    &__sub-heading {
         margin-bottom: $spacing-large;
-        padding-bottom: $spacing-base;
-        text-align: center;
 
         @media (min-width: $breakpoint-desk) {
-            text-align: left;
+            margin-bottom: $spacing-huge;
         }
 
     }

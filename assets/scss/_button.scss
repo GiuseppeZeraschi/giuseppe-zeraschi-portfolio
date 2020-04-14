@@ -3,7 +3,7 @@
     box-shadow: 3px 3px $black;
     font-family: 'Space Mono', monospace;
     font-size: 1.8rem;
-    padding: 1.2rem 2.4rem;
+    padding: $spacing-small $spacing-large;
     transition: all .3s ease-in-out;
 
     &:hover {

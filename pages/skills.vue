@@ -1,17 +1,25 @@
 <template>
-  <div class="v-skills u-section u-flex u-flex--column u-flex--row@fromDevice u-flex__justify-content--space-evenly u-flex__align-items--center">
-    <div v-for="(list, index) in skills" :key="index" class="u-flex u-flex--column">
-      <StarRating
-        v-for="(skill, index) in list"
-        :key="index"
-        class="v-skills__star-rating"
-        :text="skill.text"
-        :stars="skill.stars"
-      >
-        <component :is="skill.svg" class="v-skills__star-rating-icon" />
-      </StarRating>
+  <section class="v-skills u-section">
+    <h1 class="u-text--large u-margin-bottom--base u-text--center u-color-primary">
+      Skills
+    </h1>
+    <h2 class="u-text--small u-margin-bottom--huge u-text--center u-wrapper--small">
+      Here's a selection of the core web development technologies I am proficient with.
+    </h2>
+    <div class="u-flex u-flex--column u-flex--row@fromDevice u-flex__justify-content--space-evenly u-flex__align-items--center">
+      <div v-for="(list, index) in skills" :key="index" class="u-flex u-flex--column">
+        <StarRating
+          v-for="(skill, index) in list"
+          :key="index"
+          class="v-skills__star-rating"
+          :text="skill.text"
+          :stars="skill.stars"
+        >
+          <component :is="skill.svg" class="v-skills__star-rating-icon" />
+        </StarRating>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -98,9 +106,13 @@ export default {
 
 <style lang="scss">
 .v-skills {
-
   &__star-rating {
-    margin-bottom: $spacing-huge;
+    margin-bottom: $spacing-large;
+
+    @media (min-width: $breakpoint-desk) {
+      margin-bottom: $spacing-huge;
+    }
+
   }
 
   &__star-rating-icon {

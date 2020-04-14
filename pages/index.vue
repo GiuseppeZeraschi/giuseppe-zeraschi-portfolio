@@ -1,7 +1,7 @@
 <template>
-  <div class="v-index u-section">
+  <section class="v-index u-section">
     <Logo class="v-index__logo" size="huge" />
-  </div>
+  </section>
 </template>
 
 <script>

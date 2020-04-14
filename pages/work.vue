@@ -1,7 +1,7 @@
 <template>
-  <div class="v-work u-section">
+  <section class="v-work u-section">
     Work
-  </div>
+  </section>
 </template>
 
 <script>

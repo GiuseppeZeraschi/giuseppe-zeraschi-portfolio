@@ -1,7 +1,7 @@
 <template>
-  <div class="v-contact u-section">
+  <section class="v-contact u-section">
     <ContactForm />
-  </div>
+  </section>
 </template>
 
 <script>
