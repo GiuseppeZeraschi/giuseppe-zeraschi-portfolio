@@ -1,9 +1,9 @@
 <template>
   <section class="v-projects u-section u-text--initial">
-    <h1 class="u-text--large u-margin-bottom--base u-text--center u-color-primary">
+    <h1 class="u-text--huge u-margin-bottom--base u-text--center u-color-primary">
       Projects
     </h1>
-    <h2 class="u-text--small u-margin-bottom--large u-text--center u-wrapper--small">
+    <h2 class="u-text--large u-margin-bottom--large u-text--center u-wrapper--small">
       Have a look at some of the projects I've had the pleasure of contributing to.
     </h2>
     <MediaStack

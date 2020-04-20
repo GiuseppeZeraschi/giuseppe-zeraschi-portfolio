@@ -1,10 +1,10 @@
 <template>
   <section class="v-skills u-section">
-    <h1 class="u-text--large u-margin-bottom--base u-text--center u-color-primary">
+    <h1 class="u-text--huge u-margin-bottom--base u-text--center u-color-primary">
       Skills
     </h1>
-    <h2 class="u-text--small u-margin-bottom--huge u-text--center u-wrapper--small">
-      Here's a selection of the core web development technologies I am proficient with.
+    <h2 class="u-text--large u-margin-bottom--huge u-text--center u-wrapper--small">
+      Here's a selection of the core web development technologies I'm proficient with.
     </h2>
     <div class="u-flex u-flex--column u-flex--row@fromDevice u-flex__justify-content--space-evenly u-flex__align-items--center">
       <div v-for="(list, index) in skills" :key="index" class="u-flex u-flex--column">

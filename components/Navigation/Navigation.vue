@@ -18,7 +18,7 @@
                 v-for="(mobileNavLink, index) in mobileNavLinks"
                 :key="index"
                 @click="closeMobileNav()"
-                class="v-navigation__item u-text--large-alt"
+                class="v-navigation__item u-text--huge-alt"
             >
                 <nuxt-link
                     :to="`/${mobileNavLink.to}`"

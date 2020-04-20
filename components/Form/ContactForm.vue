@@ -4,10 +4,10 @@
         data-netlify="true"
         class="v-contact-form u-text--initial u-wrapper--small"
     >
-        <h1 class="v-contact-form__heading u-margin-bottom--base u-text--large u-text--center u-color-primary">
+        <h1 class="v-contact-form__heading u-margin-bottom--base u-text--huge u-text--center u-color-primary">
             {{ headings[headingIndex] }}
         </h1>
-        <h2 class="v-contact-form__sub-heading u-text--small u-text--center">
+        <h2 class="u-text--large v-contact-form__sub-heading u-text--center">
             Don't hesitate to get in contact and I'll get back to you as soon as possible.
         </h2>
         <div class="u-form__input-group">
