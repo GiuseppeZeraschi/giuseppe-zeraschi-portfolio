@@ -23,7 +23,7 @@
                 </div>
                 <label
                     for="firstName"
-                    :class="{ 'v-contact-form__label--active': inputActive(form.firstName) }"
+                    :class="{ 'v-contact-form__label--active': inputActive('firstName') }"
                     class="v-contact-form__label"
                 >
                     First Name
@@ -31,18 +31,18 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="firstName"
-                    v-model="form.firstName.value"
+                    v-model="form.firstName"
                     type="text"
                     autocomplete="given-name"
                     required
-                    @focus="form.firstName.focus = true"
-                    @blur="form.firstName.focus = false"
+                    @focus="focus.firstName = true"
+                    @blur="focus.firstName = false"
                 >
             </div>
             <div class="u-form__input-wrapper">
                 <label
                     for="lastName"
-                    :class="{ 'v-contact-form__label--active': inputActive(form.lastName) }"
+                    :class="{ 'v-contact-form__label--active': inputActive('lastName') }"
                     class="v-contact-form__label"
                 >
                     Last Name
@@ -50,12 +50,12 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="lastName"
-                    v-model="form.lastName.value"
+                    v-model="form.lastName"
                     type="text"
                     autocomplete="family-name"
                     required
-                    @focus="form.lastName.focus = true"
-                    @blur="form.lastName.focus = false"
+                    @focus="focus.lastName = true"
+                    @blur="focus.lastName = false"
                 >
             </div>
         </div>
@@ -63,7 +63,7 @@
             <div class="u-form__input-wrapper">
                 <label
                     for="phone"
-                    :class="{ 'v-contact-form__label--active': inputActive(form.phone) }"
+                    :class="{ 'v-contact-form__label--active': inputActive('phone') }"
                     class="v-contact-form__label"
                 >
                     Phone
@@ -71,17 +71,17 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="phone"
-                    v-model="form.phone.value"
+                    v-model="form.phone"
                     type="tel"
                     autocomplete="tel"
-                    @focus="form.phone.focus = true"
-                    @blur="form.phone.focus = false"
+                    @focus="focus.phone = true"
+                    @blur="focus.phone = false"
                 >
             </div>
             <div class="u-form__input-wrapper">
                 <label
                     for="email"
-                    :class="{ 'v-contact-form__label--active': inputActive(form.email) }"
+                    :class="{ 'v-contact-form__label--active': inputActive('email') }"
                     class="v-contact-form__label"
                 >
                     Email
@@ -89,19 +89,19 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="email"
-                    v-model="form.email.value"
+                    v-model="form.email"
                     type="email"
                     autocomplete="email"
                     required
-                    @focus="form.email.focus = true"
-                    @blur="form.email.focus = false"
+                    @focus="focus.email = true"
+                    @blur="focus.email = false"
                 >
             </div>
         </div>
         <div class="u-form__input-wrapper">
             <label
                 for="message"
-                :class="{ 'v-contact-form__label--active': inputActive(form.message) }"
+                :class="{ 'v-contact-form__label--active': inputActive('message') }"
                 class="v-contact-form__label"
             >
                 Message
@@ -109,11 +109,11 @@
             <textarea
                 class="v-contact-form__text-area u-form__input"
                 id="message"
-                v-model="form.message.value"
+                v-model="form.message"
                 type="text"
                 required
-                @focus="form.message.focus = true"
-                @blur="form.message.focus = false"
+                @focus="focus.message = true"
+                @blur="focus.message = false"
             />
         </div>
         <button
@@ -136,26 +136,18 @@ export default {
                 'Playing hard to get?'
             ],
             form: {
-                firstName: {
-                    value: '',
-                    focus: false
-                },
-                lastName: {
-                    value: '',
-                    focus: false
-                },
-                phone: {
-                    value: '',
-                    focus: false
-                },
-                email: {
-                    value: '',
-                    focus: false
-                },
-                message: {
-                    value: '',
-                    focus: false
-                }
+                firstName: '',
+                lastName: '',
+                phone: '',
+                email: '',
+                message: ''
+            },
+            focus: {
+                firstname: false,
+                lastName: false,
+                phone: false,
+                email: false,
+                message: false
             }
         }
     },
@@ -164,7 +156,7 @@ export default {
     },
     methods: {
         inputActive(input) {
-            return !!input.value || input.focus;
+            return !!this.form[input] || this.focus[input];
         },
         encode(data) {
             return Object.keys(data).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join("&");
