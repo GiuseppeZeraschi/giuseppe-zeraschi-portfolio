@@ -31,6 +31,7 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="firstName"
+                    name="firstName"
                     v-model="form.firstName"
                     type="text"
                     autocomplete="given-name"
@@ -50,6 +51,7 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="lastName"
+                    name="lastName"
                     v-model="form.lastName"
                     type="text"
                     autocomplete="family-name"
@@ -71,6 +73,7 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="phone"
+                    name="phone"
                     v-model="form.phone"
                     type="tel"
                     autocomplete="tel"
@@ -89,6 +92,7 @@
                 <input
                     class="v-contact-form__input u-form__input"
                     id="email"
+                    name="email"
                     v-model="form.email"
                     type="email"
                     autocomplete="email"
@@ -109,6 +113,7 @@
             <textarea
                 class="v-contact-form__text-area u-form__input"
                 id="message"
+                name="message"
                 v-model="form.message"
                 type="text"
                 required
