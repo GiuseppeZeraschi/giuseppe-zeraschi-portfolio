@@ -1,7 +1,10 @@
 <template>
     <form
+        @submit.prevent="handleSubmit"
+        name="contact"
         method="POST"
         data-netlify="true"
+        netlify-honeypot="bot-field"
         class="v-contact-form u-text--initial u-wrapper--small"
     >
         <h1 class="v-contact-form__heading u-margin-bottom--base u-text--huge u-text--center u-color-primary">
@@ -12,6 +15,12 @@
         </h2>
         <div class="u-form__input-group">
             <div class="u-form__input-wrapper">
+                <div class="v-contact-form__honey-pot">
+                <label>
+                    Don’t fill this out if you're human:
+                    <input name="bot-field">
+                </label>
+                </div>
                 <label
                     for="firstName"
                     :class="{ 'v-contact-form__label--active': inputActive(form.firstName) }"
@@ -156,6 +165,23 @@ export default {
     methods: {
         inputActive(input) {
             return !!input.value || input.focus;
+        },
+        encode(data) {
+            return Object.keys(data).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join("&");
+        },
+        handleSubmit() {
+            fetch("/", {
+                method: "post",
+                headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: this.encode({
+                "form-name": "contact",
+                ...this.form
+            })
+        })
+        .then(() => this.$router.push("thanks"))
+        .catch(() => this.$router.push("404"));
         }
     }
 }
@@ -174,6 +200,10 @@ export default {
             margin-bottom: $spacing-huge;
         }
 
+    }
+
+    &__honey-pot {
+        display: none;
     }
 
     &__label {
