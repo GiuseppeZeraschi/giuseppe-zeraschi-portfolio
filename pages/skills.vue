@@ -39,6 +39,7 @@ export default {
       title: 'Giuseppe Zeraschi | Skills'
     }
   },
+  transition: 'fade',
   components: {
     StarRating,
     JavascriptSvg,

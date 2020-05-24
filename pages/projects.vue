@@ -33,16 +33,17 @@ import ZumaLogoSvg from '~/assets/svg/brand-logos/zuma-logo.svg'
 import InkoLogoSvg from '~/assets/svg/brand-logos/inko-logo.svg'
 
 export default {
+  head() {
+    return {
+      title: 'Giuseppe Zeraschi | Projects'
+    }
+  },
+  transition: 'fade',
   components: {
     MediaStack,
     WhirliLogoSvg,
     ZumaLogoSvg,
     InkoLogoSvg
-  },
-  head() {
-    return {
-      title: 'Giuseppe Zeraschi | Projects'
-    }
   },
   data() {
     return {

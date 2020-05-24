@@ -8,13 +8,14 @@
 import Logo from '~/components/Logo/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  },
   head() {
     return {
       title: 'Giuseppe Zeraschi | Web Developer'
     }
+  },
+  transition: 'fade',
+  components: {
+    Logo
   },
 }
 </script>

@@ -11,5 +11,6 @@ export default {
       title: 'Giuseppe Zeraschi | Work'
     }
   },
+  transition: 'fade',
 }
 </script>

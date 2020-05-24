@@ -10,6 +10,12 @@
 import Status from '~/components/Status/Status.vue'
 
 export default {
+  head() {
+    return {
+      title: 'Form Submission Successful'
+    }
+  },
+  transition: 'fade',
   layout: 'plain',
   components: { Status }
 }

@@ -8,13 +8,14 @@
 import ContactForm from '~/components/Form/ContactForm.vue'
 
 export default {
-  components: {
-    ContactForm
-  },
   head() {
     return {
       title: 'Giuseppe Zeraschi | Contact'
     }
+  },
+  transition: 'fade',
+  components: {
+    ContactForm
   },
 }
 </script>
