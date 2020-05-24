@@ -1,5 +1,5 @@
 <template>
-    <div class="v-error">
+    <div class="v-404">
         <transition name="fade">
             <Status>
                 Oops! Looks like this page doesn't exist...
