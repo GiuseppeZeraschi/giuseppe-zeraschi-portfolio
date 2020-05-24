@@ -1,21 +1,11 @@
-<template>
-    <div class="v-404">
-        <Status>
-            Oops! Looks like this page doesn't exist...
-        </Status>
-    </div>
-</template>
-
-<script>
-import Status from '~/components/Status/Status.vue'
-
-export default {
-    layout: 'plain',
-    head() {
-        return {
-            title: 'Page not found...'
-        }
-    },
-    components: { Status },
-}
-</script>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;" />
+    <script type="text/javascript">
+      window.location.href = window.location.origin + "/error";
+    </script>
+    <title>Page Redirection</title>
+  </head>
+</html>
