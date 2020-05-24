@@ -38,7 +38,6 @@ export default {
       title: 'Giuseppe Zeraschi | Projects'
     }
   },
-  transition: 'fade',
   components: {
     MediaStack,
     WhirliLogoSvg,

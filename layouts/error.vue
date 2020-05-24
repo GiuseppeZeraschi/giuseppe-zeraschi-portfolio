@@ -1,8 +1,10 @@
 <template>
     <div class="v-error">
-        <Status>
-            Oops! Looks like this page doesn't exist...
-        </Status>
+        <transition name="fade">
+            <Status>
+                Oops! Looks like this page doesn't exist...
+            </Status>
+        </transition>
     </div>
 </template>
 

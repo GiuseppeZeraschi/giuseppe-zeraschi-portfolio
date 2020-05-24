@@ -73,5 +73,7 @@ export default {
         loader: 'vue-svg-loader'
       })
     }
-  }
+  },
+  layoutTransition: 'fade',
+  pageTransition: 'fade'
 }

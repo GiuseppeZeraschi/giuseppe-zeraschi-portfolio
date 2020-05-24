@@ -15,7 +15,6 @@ export default {
       title: 'Form Submission Successful'
     }
   },
-  transition: 'fade',
   layout: 'plain',
   components: { Status }
 }

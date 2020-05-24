@@ -13,7 +13,6 @@ export default {
       title: 'Giuseppe Zeraschi | Web Developer'
     }
   },
-  transition: 'fade',
   components: {
     Logo
   },

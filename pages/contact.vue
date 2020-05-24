@@ -13,7 +13,6 @@ export default {
       title: 'Giuseppe Zeraschi | Contact'
     }
   },
-  transition: 'fade',
   components: {
     ContactForm
   },
