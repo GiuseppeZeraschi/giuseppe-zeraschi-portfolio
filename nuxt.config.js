@@ -75,6 +75,5 @@ export default {
     }
   },
   layoutTransition: 'fade',
-  pageTransition: 'fade',
-  generate: { fallback: true }
+  pageTransition: 'fade'
 }
