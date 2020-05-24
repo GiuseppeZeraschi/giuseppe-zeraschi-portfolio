@@ -1,11 +1,14 @@
 <template>
-    <div class="v-error u-wrapper">
-        <h1 class="v-error__heading">Oops! Looks like this page doesn't exist...</h1>
-        <nuxt-link class="u-button" to="/">Back to home</nuxt-link>
+    <div class="v-error">
+        <Status>
+            Oops! Looks like this page doesn't exist...
+        </Status>
     </div>
 </template>
 
 <script>
+import Status from '~/components/Status/Status.vue'
+
 export default {
     layout: 'plain',
     head() {
@@ -13,22 +16,6 @@ export default {
             title: 'Page not found...'
         }
     },
+    components: { Status },
 }
 </script>
-
-<style lang="scss">
-.v-error {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    text-align: center;
-
-    &__heading {
-        font-size: 3.2rem;
-        margin-bottom: $spacing-large;
-    }
-
-}
-</style>

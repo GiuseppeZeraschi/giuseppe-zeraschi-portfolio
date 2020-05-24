@@ -1,0 +1,16 @@
+<template>
+  <div class="v-success">
+    <Status button-text="Contact Form" to="/contact">
+      Unfortunately the form submission failed. Please try again
+    </Status>
+  </div>
+</template>
+
+<script>
+import Status from '~/components/Status/Status.vue'
+
+export default {
+  layout: 'plain',
+  components: { Status }
+}
+</script>

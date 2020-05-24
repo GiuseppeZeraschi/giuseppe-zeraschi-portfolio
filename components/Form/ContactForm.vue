@@ -164,21 +164,21 @@ export default {
             return !!this.form[input] || this.focus[input];
         },
         encode(data) {
-            return Object.keys(data).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join("&");
+            return Object.keys(data).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join('&');
         },
         handleSubmit() {
-            fetch("/", {
-                method: "post",
+            fetch('/', {
+                method: 'post',
                 headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+                'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 body: this.encode({
-                "form-name": "contact",
+                'form-name': 'contact',
                 ...this.form
             })
         })
-        .then(() => this.$router.push("thanks"))
-        .catch(() => this.$router.push("404"));
+        .then(() => this.$router.push('form-success'))
+        .catch(() => this.$router.push('form-fail'));
         }
     }
 }
