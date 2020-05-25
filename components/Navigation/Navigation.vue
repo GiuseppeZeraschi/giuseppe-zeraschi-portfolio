@@ -27,16 +27,19 @@
                     {{ mobileNavLink.text }}
                 </nuxt-link>
             </li>
+            <SocialLinks />
         </ul>
     </nav>
 </template>
 
 <script>
 import Logo from '~/components/Logo/Logo.vue'
+import SocialLinks from '~/components/Social/SocialLinks.vue'
 
 export default {
     components: {
-        Logo
+        Logo,
+        SocialLinks
     },
     props: {
         pageIsScrolled: {
@@ -51,10 +54,11 @@ export default {
                     text: 'Skills',
                     to: 'skills'
                 },
-                {
-                    text: 'Work',
-                    to: 'work'
-                },
+                // TODO - Uncomment when work page is done
+                // {
+                //     text: 'Work',
+                //     to: 'work'
+                // },
                 {
                     text: 'Projects',
                     to: 'projects'
@@ -103,6 +107,7 @@ export default {
         flex-direction: column;
         height: 100%;
         justify-content: flex-end;
+        padding-bottom: $spacing-large;
     }
 
     &__item {
@@ -132,6 +137,7 @@ export default {
             align-items: center;
             flex-direction: row;
             justify-content: flex-end;
+            padding-bottom: 0;
         }
 
         .v-navigation__logo {
@@ -143,11 +149,7 @@ export default {
             font-size: 1.8rem;
             letter-spacing: .1rem;
             margin-bottom: 0;
-
-            &:not(:first-child) {
-                margin-left: $spacing-base;
-            }
-
+            margin-right: $spacing-base;
         }
 
         &__link {

@@ -48,8 +48,7 @@ export default {
     GitSvg,
     CssSvg,
     SassSvg,
-    HtmlSvg,
-
+    HtmlSvg
   },
   data() {
     return {
