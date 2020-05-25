@@ -112,6 +112,10 @@ export default {
 
     &__item {
         margin-bottom: $spacing-large;
+
+        &:last-of-type {
+            margin-bottom: $spacing-huge;
+        }
     }
 
     &__link {
