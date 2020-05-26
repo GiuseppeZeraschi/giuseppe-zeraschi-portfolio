@@ -39,7 +39,7 @@ export default {
     cursor: pointer;
     margin-right: -$spacing-tiny;
     padding: $spacing-tiny;
-    position: absolute;
+    position: fixed;
     right: $spacing-base;
     top: $spacing-base;
     width: 65px;
