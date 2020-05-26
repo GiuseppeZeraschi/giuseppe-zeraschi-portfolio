@@ -27,7 +27,7 @@
                     {{ mobileNavLink.text }}
                 </nuxt-link>
             </li>
-            <SocialLinks />
+            <SocialLinks class="v-navigation__social-links" />
         </ul>
     </nav>
 </template>
@@ -94,14 +94,6 @@ export default {
     top: 0;
     z-index: $z-index-mobile-nav;
 
-    &__logo {
-        display: flex;
-        left: $spacing-base;
-        margin-left: -$spacing-tiny;
-        position: absolute;
-        top: $spacing-base;
-    }
-
     &__links {
         display: flex;
         flex-direction: column;
@@ -119,12 +111,17 @@ export default {
     }
 
     &__link {
+        margin-left: -$spacing-tiny;
         padding: $spacing-tiny;
 
         &--active {
             color: $color-primary;
         }
 
+    }
+
+    &__social-links {
+        margin-left: -$spacing-tiny;
     }
 
     @media (min-width: $breakpoint-desk) {
@@ -157,7 +154,7 @@ export default {
         }
 
         &__link {
-        transition: text-shadow .2s ease-in-out;
+            transition: text-shadow .2s ease-in-out;
 
             &:hover:not(.v-navigation__link--active) {
                 text-shadow: 0 0 3px $color-primary, 0 0 6px $color-primary-light;

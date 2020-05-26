@@ -1,6 +1,6 @@
 <template>
   <section class="v-skills u-section">
-    <h1 class="u-text--huge u-margin-bottom--base u-text--center u-color-primary">
+    <h1 class="u-text--gigantic u-margin-bottom--large u-text--center u-color-primary">
       Skills
     </h1>
     <h2 class="u-text--large u-margin-bottom--huge u-text--center u-wrapper--small">
@@ -62,7 +62,7 @@ export default {
           {
             svg: 'VueSvg',
             text: 'Vue',
-            stars: 5
+            stars: 4
           },
           {
             svg: 'PhpSvg',

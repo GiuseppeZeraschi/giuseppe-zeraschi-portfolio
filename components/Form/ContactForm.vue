@@ -7,10 +7,10 @@
         netlify-honeypot="bot-field"
         class="v-contact-form u-text--initial u-wrapper--small"
     >
-        <h1 class="v-contact-form__heading u-margin-bottom--base u-text--huge u-text--center u-color-primary">
+        <h1 class="v-contact-form__heading u-margin-bottom--large u-text--gigantic u-text--center u-color-primary">
             {{ headings[headingIndex] }}
         </h1>
-        <h2 class="u-text--large v-contact-form__sub-heading u-text--center">
+        <h2 class="u-text--large v-contact-form__sub-heading u-text--center u-margin-bottom--huge">
             Don't hesitate to get in contact and I'll get back to you as soon as possible.
         </h2>
         <div class="u-form__input-group">
@@ -190,15 +190,6 @@ export default {
     flex-direction: column;
     justify-content: center;
 
-    &__sub-heading {
-        margin-bottom: $spacing-large;
-
-        @media (min-width: $breakpoint-desk) {
-            margin-bottom: $spacing-huge;
-        }
-
-    }
-
     &__honey-pot {
         display: none;
     }
@@ -219,9 +210,13 @@ export default {
 
     &__text-area {
         height: $spacing-huge;
-        margin-bottom: $spacing-large;
+        margin-bottom: $spacing-huge;
         resize: none;
         width: 100%;
+
+        @media (min-width: $breakpoint-desk) {
+            margin-bottom: $spacing-large;
+        }
     }
 
     &__submit {

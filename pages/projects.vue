@@ -1,9 +1,9 @@
 <template>
   <section class="v-projects u-section u-text--initial">
-    <h1 class="u-text--huge u-margin-bottom--base u-text--center u-color-primary">
+    <h1 class="u-text--gigantic u-margin-bottom--large u-text--center u-color-primary">
       Projects
     </h1>
-    <h2 class="u-text--large u-margin-bottom--large u-text--center u-wrapper--small">
+    <h2 class="u-text--large u-margin-bottom--huge u-text--center u-wrapper--small">
       Have a look at some of the projects I've had the pleasure of contributing to.
     </h2>
     <MediaStack
@@ -18,9 +18,9 @@
         <component :is="project.svg" class="v-projects__brand-logo" />
       </template>
       <template v-slot:text>
-        <h2 class="v-projects__heading u-text--huge u-margin-bottom--base u-color-primary">
+        <h3 class="v-projects__heading u-text--huge u-margin-bottom--large u-color-primary">
           {{ project.title }}
-        </h2>
+        </h3>
         <p v-for="(paragraph, index) in project.copy" :key="index" class="v-projects__paragraph">
           {{ paragraph }}
         </p>
@@ -67,7 +67,7 @@ export default {
           title: 'Zuma',
           copy: [
             'Zuma is a high-end Japanese izakaya style restaurant with locations all around the world.',
-            'The website has a Vue JS front end with a Wordpress CMS. Over the past two years I have contributed to maintaining the site and spent three months working on a project to ensure the site meets AA level accessibility'
+            'The website has a Vue JS front end with a Wordpress CMS. Over the past two years I have contributed to maintaining the site and spent three months working on a project to ensure the site meets AA level accessibility.'
           ]
         },
         {
@@ -76,8 +76,8 @@ export default {
           svg: 'InkoLogoSvg',
           title: 'Inko Nito',
           copy: [
-            'Inko Nito is a Japanese robatayaki restaurant with locations in London and Los Angeles',
-            'Their website is also a Wordpress CMS with a Vue JS front end. Similarly to Zuma I have made contributions to maintaining the site and spent three months overhauling the entire site to bring it up to AA accessibility standards'
+            'Inko Nito is a Japanese robatayaki restaurant with locations in London and Los Angeles.',
+            'Their website is also a Wordpress CMS with a Vue JS front end. Similarly to Zuma I have made contributions to maintaining the site and spent three months overhauling the entire site to bring it up to AA accessibility standards.'
           ]
         }
       ]
@@ -122,7 +122,7 @@ export default {
   &__heading {
 
     @media (max-width: $breakpoint-desk) {
-      visibility: hidden;
+      display: none;
     }
 
   }

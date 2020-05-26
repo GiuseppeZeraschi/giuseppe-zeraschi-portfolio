@@ -25,6 +25,10 @@ export default {
 .v-logo {
   width: auto;
 
+  &--small {
+    height: 50px;
+  }
+
   &--base {
     height: 60px;
   }
