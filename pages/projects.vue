@@ -18,8 +18,11 @@
         <component :is="project.svg" class="v-projects__brand-logo" />
       </template>
       <template v-slot:text>
-        <p class="u-margin-bottom--large">
-          {{ project.copy }}
+        <h2 class="v-projects__heading u-text--huge u-margin-bottom--base u-color-primary">
+          {{ project.title }}
+        </h2>
+        <p v-for="(paragraph, index) in project.copy" :key="index" class="v-projects__paragraph">
+          {{ paragraph }}
         </p>
       </template>
     </MediaStack>
@@ -51,19 +54,31 @@ export default {
           buttonHref: 'https://whirli.com/',
           buttonText: 'Visit Whirli',
           svg: 'WhirliLogoSvg',
-          copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illo magni praesentium earum officiis assumenda. Dicta libero ipsam esse pariatur possimus adipisci nulla tenetur, soluta dolore repellat aperiam nemo non excepturi sunt fugit, eligendi aspernatur officiis veniam cumque at a, quis minima quibusdam distinctio! Veritatis aliquam quod cum nobis quidem.'
+          title: 'Whirli',
+          copy: [
+            'Whirli is a Uk based toy subscription company. Their current website is a Vue Laravel build that I have been fortunate enough to work on pretty much full time since the start of my web development career.',
+            'We recently rebuilt the website as a single page application with a Nuxt JS front end and a Laravel API.'
+          ]
         },
         {
           buttonHref: 'https://zumarestaurant.com/',
           buttonText: 'Visit Zuma',
           svg: 'ZumaLogoSvg',
-          copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illo magni praesentium earum officiis assumenda. Dicta libero ipsam esse pariatur possimus adipisci nulla tenetur, soluta dolore repellat aperiam nemo non excepturi sunt fugit, eligendi aspernatur officiis veniam cumque at a, quis minima quibusdam distinctio! Veritatis aliquam quod cum nobis quidem.'
+          title: 'Zuma',
+          copy: [
+            'Zuma is a high-end Japanese izakaya style restaurant with locations all around the world.',
+            'The website has a Vue JS front end with a Wordpress CMS. Over the past two years I have contributed to maintaining the site and spent three months working on a project to ensure the site meets AA level accessibility'
+          ]
         },
         {
           buttonHref: 'https://inkonitorestaurant.com/',
           buttonText: 'Visit Inko Nito',
           svg: 'InkoLogoSvg',
-          copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illo magni praesentium earum officiis assumenda. Dicta libero ipsam esse pariatur possimus adipisci nulla tenetur, soluta dolore repellat aperiam nemo non excepturi sunt fugit, eligendi aspernatur officiis veniam cumque at a, quis minima quibusdam distinctio! Veritatis aliquam quod cum nobis quidem.'
+          title: 'Inko Nito',
+          copy: [
+            'Inko Nito is a Japanese robatayaki restaurant with locations in London and Los Angeles',
+            'Their website is also a Wordpress CMS with a Vue JS front end. Similarly to Zuma I have made contributions to maintaining the site and spent three months overhauling the entire site to bring it up to AA accessibility standards'
+          ]
         }
       ]
     }
@@ -102,6 +117,24 @@ export default {
       width: 25rem;
     }
 
+  }
+
+  &__heading {
+
+    @media (max-width: $breakpoint-desk) {
+      visibility: hidden;
+    }
+
+  }
+
+  &__paragraph {
+    &:not(:last-of-type) {
+      margin-bottom: $spacing-small;
+    }
+
+    &:last-of-type {
+      margin-bottom: $spacing-large;
+    }
   }
 
 }

@@ -75,10 +75,6 @@ export default {
 
     }
 
-    &__button {
-        float: right;
-    }
-
     &--reverse {
 
         @media (min-width: $breakpoint-desk) {
@@ -96,11 +92,6 @@ export default {
         .v-media-stack__text {
             margin-left: 0;
         }
-
-        .v-media-stack__button {
-            float: none;
-        }
-
     }
 
 }

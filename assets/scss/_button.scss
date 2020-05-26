@@ -1,6 +1,7 @@
 .u-button {
     background-color: $color-primary;
     box-shadow: 3px 3px $black;
+    display: inline-block;
     font-family: 'Space Mono', monospace;
     font-size: 1.8rem;
     padding: $spacing-small $spacing-large;
