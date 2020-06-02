@@ -10,7 +10,7 @@
                 @click="closeMobileNav()"
                 class="v-navigation__logo"
             >
-                <nuxt-link to="/" class="v-navigation__link">
+                <nuxt-link v-if="$route.path !== '/'" to="/" class="v-navigation__link">
                     <Logo />
                 </nuxt-link>
             </li>

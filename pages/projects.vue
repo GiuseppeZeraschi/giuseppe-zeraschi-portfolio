@@ -3,7 +3,7 @@
     <h1 class="u-text--gigantic u-margin-bottom--large u-text--center u-color-primary">
       Projects
     </h1>
-    <h2 class="u-text--large u-margin-bottom--huge u-text--center u-wrapper--small">
+    <h2 class="u-text--large u-color-light-grey-one u-margin-bottom--huge u-text--center u-wrapper--small">
       Have a look at some of the projects I've had the pleasure of contributing to.
     </h2>
     <MediaStack

@@ -10,7 +10,7 @@
         <h1 class="v-contact-form__heading u-margin-bottom--large u-text--gigantic u-text--center u-color-primary">
             {{ headings[headingIndex] }}
         </h1>
-        <h2 class="u-text--large v-contact-form__sub-heading u-text--center u-margin-bottom--huge">
+        <h2 class="u-text--large v-contact-form__sub-heading u-color-light-grey-one u-text--center u-margin-bottom--huge">
             Don't hesitate to get in contact and I'll get back to you as soon as possible.
         </h2>
         <div class="u-form__input-group">

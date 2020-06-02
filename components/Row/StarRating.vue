@@ -85,7 +85,7 @@ $icon-dimensions: 8.4rem;
 
     &__star {
         border-radius: 50%;
-        background-color: $color-primary;
+        background-color: $light-grey-one;
         height: $spacing-small;
         left: 50%;
         opacity: 0;

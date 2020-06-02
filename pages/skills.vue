@@ -3,7 +3,7 @@
     <h1 class="u-text--gigantic u-margin-bottom--large u-text--center u-color-primary">
       Skills
     </h1>
-    <h2 class="u-text--large u-margin-bottom--huge u-text--center u-wrapper--small">
+    <h2 class="u-text--large u-color-light-grey-one u-margin-bottom--huge u-text--center u-wrapper--small">
       Here's a selection of the core web development technologies I'm proficient with.
     </h2>
     <div class="u-flex u-flex--column u-flex--row@fromDevice u-flex__justify-content--space-evenly u-flex__align-items--center">

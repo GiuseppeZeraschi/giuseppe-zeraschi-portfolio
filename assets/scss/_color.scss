@@ -5,6 +5,8 @@ $grey-one: #424242;
 $grey-two: #303030;
 $grey-three: #212121;
 
+$light-grey-one: #CDCDCD;
+
 $white: #FFFFFF;
 $black: #000000;
 
@@ -15,4 +17,8 @@ body {
 
 .u-color-primary {
     color: $color-primary;
+}
+
+.u-color-light-grey-one {
+    color: $light-grey-one;
 }
