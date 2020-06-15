@@ -4,7 +4,8 @@
       Projects
     </h1>
     <h2 class="u-text--large u-color-light-grey-one u-margin-bottom--huge u-text--center u-wrapper--small">
-      Have a look at some of the projects I've had the pleasure of contributing to.
+      Have a look at some of the projects I've had the pleasure of contributing to as part of a team at
+      <a class="u-color-primary u-underline" href="https://hexdigital.com/" target="_blank">Hex Digital</a>.
     </h2>
     <MediaStack
       v-for="(project, index) in projects"
